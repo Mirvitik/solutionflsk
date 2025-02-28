@@ -13,6 +13,10 @@ def news(username):
 def image(username):
     return render_template('training.html', title=username)
 
+@app.route('/list_prof/<t>')
+def profs(t):
+    return render_template('professions.html', t=t)
+
 
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')
